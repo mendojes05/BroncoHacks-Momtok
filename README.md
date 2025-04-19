@@ -4,6 +4,6 @@ We created a visual novel to help any lonely introverted CS no-rizz community to
 
 **Sia Yes**: 3rd Year business oriented CIS major
 
-**Komp Sy**: Anime loveing Computer Science Major who is chronically online.
+**Komp Sy**: Anime loving Computer Science Major who is chronically online.
 
 Made with love and Ren'Py for BroncoHacks 2025.
