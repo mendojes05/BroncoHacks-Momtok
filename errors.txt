@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 19: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    $ player_name = renpy.input("What is your name, dear Hackathon participant?")
-    ^
+File "game/script.rpy", line 148: end of line expected.
+    p "I like your funny words, strange person":
+                                               ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Fri Apr 18 16:31:42 2025
+Fri Apr 18 18:58:09 2025
