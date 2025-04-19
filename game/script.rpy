@@ -2,32 +2,69 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
-define e = Character("Eileen")
-
+init python:
+    player_name = ""
+    sia_points = 0
+    komp_points = 0
+define p = Character("[player_name]")
+define cs = Character("Komp Sy")
+define cis = Character("Sia Yes")
 
 # The game starts here.
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
+    scene bg main_room
+# The phrase in the brackets is the text that the game will display to prompt 
+# the player to enter the name they've chosen.
     show eileen happy
 
-    # These display lines of dialogue.
+    "This is me, I'm just your average CPP student working on this Hackathon"
 
-    e "You've created a new Ren'Py game."
+    $ player_name = renpy.input("Wait, but what was my name?")
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    $ player_name = player_name.strip()
+# The .strip() instruction removes any extra spaces the player 
+# may have typed by accident.
 
-    # This ends the game.
+#  If the player can't be bothered to choose a name, then we
+#  choose a suitable one for them:
+    if player_name == "":
+        $ player_name="Billy Bronco"
+    # define p = Character(player_name)
 
-    return
+# And get a nostalgic sigh from Seasons of Sakura fans!
+    
+# Now the other characters in the game can greet the player.
+  
+    p "Ah of course. My name is [player_name]!"
+    p "How silly of me to forget my own name!"
+
+
+    p "Now that I'm here I gotta find myself a team."
+    p "I should go talk to someone."
+
+    "You look around the room and your eyes fall on two people on oppsite sides of the room."
+
+    p "Who should I talk to?"
+
+    menu:
+        "The person the right.":
+            jump CS
+        "The person on the left.":
+            jump CIS
+
+
+
+label CS:
+    p "Hey my name is [player_name]!"
+
+    cs "Hey"
+
+    
+label CIS:
+
+    p "Hey my name is [player_name]!"
+
+    cis "Hey"
+
